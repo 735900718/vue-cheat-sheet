@@ -1,12 +1,14 @@
 var path = require('path')
 var webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const cleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'build.js'
+    path: path.resolve(__dirname, './'),
+    publicPath: './',
+    filename: 'build.[hash].js'
   },
   module: {
     rules: [
@@ -103,6 +105,14 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
+    }),
+    new cleanWebpackPlugin([
+        './build.*.js',
+        './build.*.js.map'
+    ]),
+    new HtmlWebpackPlugin({
+      template: 'template.html',
+      inject: true
     })
   ])
 }

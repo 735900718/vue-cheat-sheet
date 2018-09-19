@@ -22,7 +22,7 @@ export default {
   data () {
     return {
       tabs: ['vue', 'vue-router'],
-      currentTab: 'vue-router',
+      currentTab: 'vue',
       vue: {
         link: vueMenu,
         baseUrl: "https://cn.vuejs.org/v2/"
