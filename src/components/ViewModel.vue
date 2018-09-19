@@ -64,9 +64,6 @@ export default {
     version: function(val) {
       return val.split('@')[1];
     }
-  },
-  mounted () {
-    console.log(this.$parent);
   }
 }
 </script>

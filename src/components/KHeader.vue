@@ -1,14 +1,18 @@
 <template>
-  <el-tabs v-model="active" type="card" @tab-click="handleClick">
-    <el-tab-pane
-      v-for="(item, i) in tabs"
-      :key="i"
-      :label="item"
-      :name="item">{{ item }}</el-tab-pane>
-  </el-tabs>
+  <div class="k-header">
+    <el-tabs v-model="active" type="card" @tab-click="handleClick">
+      <el-tab-pane
+        v-for="(item, i) in tabs"
+        :key="i"
+        :label="item"
+        :name="item">{{ item }}</el-tab-pane>
+    </el-tabs>
+    <Github/>
+  </div>
 </template>
 
 <script>
+import Github from './Github'
 export default {
   name: 'k-header',
   props: {
@@ -19,6 +23,9 @@ export default {
     return {
       active: this.currentTab
     }
+  },
+  components: {
+    Github
   },
   methods: {
     handleClick: function() {
