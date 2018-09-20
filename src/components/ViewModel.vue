@@ -53,7 +53,7 @@ export default {
   methods: {
     handleClose: function() {
       this.isShow = false;
-      this.current = '';
+      this.current = this.current.slice(0, this.current.indexOf('#') + 1);
     },
     handleClick: function(href) {
       this.current = href.split('@')[0];
