@@ -3,7 +3,7 @@
     <ul
       class="menu-root"
       :style="{
-        columnCount: $parent.currentTab === 'vue-router' ? 5 : ''
+        columnCount: $parent.currentTab === 'vue' ? '' : 5
       }">
       <li
         v-for="(item, key, index) in link"
@@ -22,6 +22,7 @@
           </li>
         </ul>
       </li>
+      <component :is="link.slot"></component>
     </ul>
     <div class="modal" v-show="isShow" @click.self="handleClose">
       <button @click="handleClose">×</button>

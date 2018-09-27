@@ -3,6 +3,7 @@
     <k-header :currentTab.sync="currentTab" :tabs="tabs"/>
     <viewModel v-show="currentTab === 'vue'" :link="vue.link" :baseUrl="vue.baseUrl"/>
     <viewModel v-show="currentTab === 'vue-router'" :link="vueRouter.link" :baseUrl="vueRouter.baseUrl"/>
+    <viewModel v-show="currentTab === 'vuex'" :link="vueX.link" :baseUrl="vueX.baseUrl"/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import KHeader from './components/KHeader'
 
 import vueMenu from "./data/vueMenu"
 import vueRouterMenu from "./data/vueRouterMenu"
+import vueXMenu from './data/vueXMenu'
 
 export default {
   name: 'app',
@@ -21,8 +23,8 @@ export default {
   },
   data () {
     return {
-      tabs: ['vue', 'vue-router'],
-      currentTab: 'vue',
+      tabs: ['vue', 'vue-router', 'vuex'],
+      currentTab: 'vuex',
       vue: {
         link: vueMenu,
         baseUrl: "https://cn.vuejs.org/v2/"
@@ -30,6 +32,10 @@ export default {
       vueRouter: {
         link: vueRouterMenu,
         baseUrl: "https://router.vuejs.org/zh/"
+      },
+      vueX: {
+        link: vueXMenu,
+        baseUrl: "https://vuex.vuejs.org/zh/"
       }
     }
   }
