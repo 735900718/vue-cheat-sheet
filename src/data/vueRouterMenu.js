@@ -1,6 +1,6 @@
 export default {
-  "Props": {
-    "title": "router-link",
+  "<router-link>": {
+    "title": "Props",
     "url": "#router-link-props",
     "sub": {
       "to": "#to",
@@ -10,11 +10,12 @@ export default {
       "active-class": "#active-class",
       "exact": "#exact",
       "event": "#event",
-      "exact-active-class": "#exact-active-class"
+      "exact-active-class": "#exact-active-class",
+      "aria-current-value": "#aria-current-value"
     }
   },
-  "Props ": {
-    "title": "router-view",
+  "<router-view>": {
+    "title": "Props",
     "url": "#router-view-props",
     "sub": {
       "name": "#name"
@@ -74,6 +75,15 @@ export default {
       "$route.matched": "#路由对象",
       "$route.name": "#路由对象",
       "$route.redirectedFrom": "#路由对象"
+    }
+  },
+  "组件内守卫" : {
+    "title": "",
+    "url": "guide/advanced/navigation-guards.html#组件内的守卫",
+    "sub": {
+      "beforeRouteEnter": "guide/advanced/navigation-guards.html#组件内的守卫",
+      "beforeRouteUpdate": "guide/advanced/navigation-guards.html#组件内的守卫@2.2",
+      "beforeRouteLeave": "guide/advanced/navigation-guards.html#组件内的守卫"
     }
   }
 }

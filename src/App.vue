@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <k-header :currentTab.sync="currentTab" :tabs="tabs"/>
-    <viewModel v-show="currentTab === 'vue'" :link="vue.link" :baseUrl="vue.baseUrl"/>
-    <viewModel v-show="currentTab === 'vue-router'" :link="vueRouter.link" :baseUrl="vueRouter.baseUrl"/>
-    <viewModel v-show="currentTab === 'vuex'" :link="vueX.link" :baseUrl="vueX.baseUrl"/>
+    <viewModel v-if="currentTab === 'vue'" :link="vue.link" :baseUrl="vue.baseUrl"/>
+    <viewModel v-if="currentTab === 'vue-router'" :link="vueRouter.link" :baseUrl="vueRouter.baseUrl"/>
+    <viewModel v-if="currentTab === 'vuex'" :link="vueX.link" :baseUrl="vueX.baseUrl"/>
   </div>
 </template>
 
@@ -24,7 +24,7 @@ export default {
   data () {
     return {
       tabs: ['vue', 'vue-router', 'vuex'],
-      currentTab: 'vuex',
+      currentTab: 'vue',
       vue: {
         link: vueMenu,
         baseUrl: "https://cn.vuejs.org/v2/"

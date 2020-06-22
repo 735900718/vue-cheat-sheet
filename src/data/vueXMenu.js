@@ -1,16 +1,27 @@
 export default {
+  "核心概念": {
+    "title": "Instance",
+    "url": "guide/state.html",
+    "sub": {
+      "State": "guide/state.html",
+      "Getter": "guide/getter.html",
+      "Mutations": "guide/mutations.html",
+      "Action": "guide/action.html",
+      "Module": "guide/module.html",
+    }
+  },
   "构造器选项": {
     "title": "Options",
     "url": "#vuex-store-构造器选项",
     "sub": {
-      "state <small>: object</small>": "#state",
-      "mutations <small>: object</small>": "#mutations",
-      "actions <small>: object</small>": "#actions",
-      "getters <small>: object</small>": "#getters",
+      "state <small>: Object | Function</small>": "#state",
+      "mutations <small>: {[type: string]: Function}</small>": "#mutations",
+      "actions <small>: {[type: string]: Function}</small>": "#actions",
+      "getters <small>: {[key: string]: Function}</small>": "#getters",
       "modules <small>: object</small>": "#modules",
-      "plugins <small>: array</small>": "#plugins",
+      "plugins <small>: Array<Function></small>": "#plugins",
       "strict <small>: boolean</small>": "#strict",
-      "namespaced  <small>: boolean</small>": "guide/modules.html#命名空间"
+      "devtools  <small>: boolean</small>": "#devtools"
     }
   },
   "实例属性": {
@@ -33,7 +44,8 @@ export default {
       "subscribeAction": "#subscribeaction@2.5",
       "registerModule": "#registermodule",
       "unregisterModule": "#unregistermodule",
-      "hotUpdate": "#hotupdate",
+      "hasModule": "#hasModule@3.2",
+      "hotUpdate": "#hotupdate"
     }
   },
   "辅助函数": {

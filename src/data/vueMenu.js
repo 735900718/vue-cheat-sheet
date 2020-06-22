@@ -7,6 +7,7 @@ export default {
       "optionMergeStrategies": "#optionMergeStrategies",
       "devtools": "#devtools",
       "errorHandler": "#errorHandler",
+      "warnHandler": "#warnHandler@2.4",
       "ignoredElements": "#ignoredElements",
       "keyCodes": "#keyCodes",
       "performance": "#performance@2.2",
@@ -27,6 +28,7 @@ export default {
       "Vue.use": "#Vue-use",
       "Vue.mixin": "#Vue-mixin",
       "Vue.compile": "#Vue-compile",
+      "Vue.observable": "#Vue-observable@2.6",
       "Vue.version": "#Vue-version"
     }
   },
@@ -143,7 +145,9 @@ export default {
       "vm.$slots": "#vm-slots",
       "vm.$scopedSlots": "#vm-scopedSlots@2.1",
       "vm.$refs": "#vm-refs",
-      "vm.$isServer": "#vm-isServer"
+      "vm.$isServer": "#vm-isServer",
+      "vm.$attrs": "#vm-attrs@2.4",
+      "vm.$listeners": "#vm-listeners@2.4"
     }
   },
   "指令": {
@@ -160,6 +164,7 @@ export default {
       "v-on": "#v-on",
       "v-bind": "#v-bind",
       "v-model": "#v-model",
+      "v-slot": "#v-slot@2.6",
       "v-pre": "#v-pre",
       "v-cloak": "#v-cloak",
       "v-once": "#v-once"
@@ -182,10 +187,10 @@ export default {
     "sub": {
       "key": "#key",
       "ref": "#ref",
-      "slot": "#slot",
-      "slot-scope": "#slot-scope@2.5",
-      "scope": "#scope-replaced",
-      "is": "#is"
+      "is": "#is",
+      "slot": "#slot@2.6废弃",
+      "slot-scope": "#slot-scope@2.6废弃",
+      "scope": "#scope-replaced@2.5移除"
     }
   },
   "组件": {
