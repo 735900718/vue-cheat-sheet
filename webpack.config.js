@@ -6,7 +6,7 @@ const cleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './'),
+    path: path.resolve(__dirname, './dist'),
     publicPath: './',
     filename: 'build.[hash].js'
   },
@@ -107,8 +107,8 @@ if (process.env.NODE_ENV === 'production') {
       minimize: true
     }),
     new cleanWebpackPlugin([
-        './build.*.js',
-        './build.*.js.map'
+        './dist/build.*.js',
+        './dist/build.*.js.map'
     ]),
     new HtmlWebpackPlugin({
       template: 'template.html',
